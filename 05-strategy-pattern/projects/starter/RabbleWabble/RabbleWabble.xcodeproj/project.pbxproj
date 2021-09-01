@@ -19,6 +19,9 @@
 		425C94BC22EF3371007B51EE /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425C94BB22EF3371007B51EE /* QuestionView.swift */; };
 		42FBF7D522EF67CF00186FF0 /* SelectQuestionGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FBF7D422EF67CF00186FF0 /* SelectQuestionGroupViewController.swift */; };
 		42FBF7D722EF67F900186FF0 /* QuestionGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FBF7D622EF67F900186FF0 /* QuestionGroupCell.swift */; };
+		EFE1443E26DBC08D0013B32A /* QuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1443D26DBC08D0013B32A /* QuestionStrategy.swift */; };
+		EFE1444126DBD0470013B32A /* SequentialQuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1444026DBD0470013B32A /* SequentialQuestionStrategy.swift */; };
+		EFE1444326DBDDEF0013B32A /* RandomQuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1444226DBDDEF0013B32A /* RandomQuestionStrategy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		425C94BB22EF3371007B51EE /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		42FBF7D422EF67CF00186FF0 /* SelectQuestionGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectQuestionGroupViewController.swift; sourceTree = "<group>"; };
 		42FBF7D622EF67F900186FF0 /* QuestionGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionGroupCell.swift; sourceTree = "<group>"; };
+		EFE1443D26DBC08D0013B32A /* QuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionStrategy.swift; sourceTree = "<group>"; };
+		EFE1444026DBD0470013B32A /* SequentialQuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequentialQuestionStrategy.swift; sourceTree = "<group>"; };
+		EFE1444226DBDDEF0013B32A /* RandomQuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuestionStrategy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,9 +128,20 @@
 				420C7C5222EC8F3700472B72 /* Controllers */,
 				420C7C5322EC8F5900472B72 /* Models */,
 				420C7C5422EC8F5D00472B72 /* Resources */,
+				EFE1443C26DBBF440013B32A /* Strategies */,
 				420C7C5522EC8F6200472B72 /* Views */,
 			);
 			path = RabbleWabble;
+			sourceTree = "<group>";
+		};
+		EFE1443C26DBBF440013B32A /* Strategies */ = {
+			isa = PBXGroup;
+			children = (
+				EFE1443D26DBC08D0013B32A /* QuestionStrategy.swift */,
+				EFE1444026DBD0470013B32A /* SequentialQuestionStrategy.swift */,
+				EFE1444226DBDDEF0013B32A /* RandomQuestionStrategy.swift */,
+			);
+			path = Strategies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +221,9 @@
 				425C94BC22EF3371007B51EE /* QuestionView.swift in Sources */,
 				425C94B622EF22BC007B51EE /* QuestionGroupData.swift in Sources */,
 				42FBF7D722EF67F900186FF0 /* QuestionGroupCell.swift in Sources */,
+				EFE1444126DBD0470013B32A /* SequentialQuestionStrategy.swift in Sources */,
+				EFE1444326DBDDEF0013B32A /* RandomQuestionStrategy.swift in Sources */,
+				EFE1443E26DBC08D0013B32A /* QuestionStrategy.swift in Sources */,
 				425C94B422EF21D3007B51EE /* QuestionGroup.swift in Sources */,
 				42FBF7D522EF67CF00186FF0 /* SelectQuestionGroupViewController.swift in Sources */,
 				424452A522EC2AFB001C3BC3 /* SceneDelegate.swift in Sources */,
