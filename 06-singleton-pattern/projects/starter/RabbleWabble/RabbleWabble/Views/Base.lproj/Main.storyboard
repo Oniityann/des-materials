@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xy3-Gd-jOt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xy3-Gd-jOt">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,23 +19,23 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MhC-XI-RHe">
                                 <rect key="frame" x="0.0" y="44" width="414" height="692"/>
-                                <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionGroupCell" id="MLa-EU-QpM" customClass="QuestionGroupCell" customModule="RabbleWabble" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.333332061767578"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="414" height="42.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MLa-EU-QpM" id="fZ8-d5-sDW">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.333332061767578"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="42.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgg-K4-jyE">
-                                                    <rect key="frame" x="20" y="10.999999999999998" width="341" height="21.333333333333329"/>
+                                                    <rect key="frame" x="20" y="11.000000000000002" width="341" height="20.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Yj-2p-z9x">
-                                                    <rect key="frame" x="369" y="10.999999999999998" width="25" height="21.333333333333329"/>
+                                                    <rect key="frame" x="369" y="11.000000000000002" width="25" height="20.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -62,30 +64,59 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Zwl-DK-DpX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="MhC-XI-RHe" firstAttribute="bottom" secondItem="Zwl-DK-DpX" secondAttribute="bottom" id="5r0-Aa-nv4"/>
                             <constraint firstItem="MhC-XI-RHe" firstAttribute="leading" secondItem="Zwl-DK-DpX" secondAttribute="leading" id="Gbl-14-JSP"/>
                             <constraint firstItem="MhC-XI-RHe" firstAttribute="trailing" secondItem="Zwl-DK-DpX" secondAttribute="trailing" id="KVL-ay-CCu"/>
                             <constraint firstItem="MhC-XI-RHe" firstAttribute="top" secondItem="Zwl-DK-DpX" secondAttribute="top" id="mUQ-qC-LGp"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Zwl-DK-DpX"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Select Question Group" id="fM4-jj-SiJ"/>
+                    <navigationItem key="navigationItem" title="Select Question Group" id="fM4-jj-SiJ">
+                        <barButtonItem key="leftBarButtonItem" image="ic_settings" id="uaV-vr-XjT">
+                            <connections>
+                                <segue destination="Fyc-K4-9b0" kind="show" id="ndb-rK-Bge"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Png-yM-MqR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.23188405797103" y="64.402173913043484"/>
         </scene>
+        <!--App Settings-->
+        <scene sceneID="ip2-vS-Wxw">
+            <objects>
+                <tableViewController title="App Settings" id="Fyc-K4-9b0" customClass="AppSettingsViewController" customModule="RabbleWabble" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VuG-z4-MS0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="wMj-cD-VdE">
+                                <rect key="frame" x="0.0" y="24.333333969116211" width="414" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wMj-cD-VdE" id="KQe-dJ-vOk">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Fyc-K4-9b0" id="DZR-sF-Vvt"/>
+                            <outlet property="delegate" destination="Fyc-K4-9b0" id="8R9-Vk-Oaw"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="gnw-m8-o7G"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sAO-ql-NJx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136" y="740"/>
+        </scene>
         <!--Question View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <tapGestureRecognizer id="SbU-WX-nDo">
-                    <connections>
-                        <action selector="toggleAnswerLabels:" destination="BYZ-38-t0r" id="v02-HN-SXD"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="QuestionViewController" customModule="RabbleWabble" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="QuestionView" customModule="RabbleWabble" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
@@ -136,7 +167,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="81e-O3-7XK" secondAttribute="bottom" constant="24" id="A6S-ub-HGi"/>
@@ -157,7 +189,6 @@
                             <constraint firstItem="sHc-5h-b5T" firstAttribute="top" secondItem="Cbr-fv-kEg" secondAttribute="bottom" constant="8" id="wuI-1A-SL0"/>
                             <constraint firstItem="s8H-Ut-tUO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xiI-mM-JIF"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
                             <outlet property="answerLabel" destination="s8H-Ut-tUO" id="LVi-9D-z3S"/>
                             <outlet property="correctCountLabel" destination="81e-O3-7XK" id="Xe6-qw-MmC"/>
@@ -168,6 +199,12 @@
                         </connections>
                     </view>
                 </viewController>
+                <tapGestureRecognizer id="SbU-WX-nDo">
+                    <connections>
+                        <action selector="toggleAnswerLabels:" destination="BYZ-38-t0r" id="v02-HN-SXD"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="900.00000000000011" y="63.586956521739133"/>
         </scene>
@@ -193,5 +230,9 @@
     <resources>
         <image name="ic_circle_check" width="80" height="80"/>
         <image name="ic_circle_x" width="80" height="80"/>
+        <image name="ic_settings" width="26" height="26"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
