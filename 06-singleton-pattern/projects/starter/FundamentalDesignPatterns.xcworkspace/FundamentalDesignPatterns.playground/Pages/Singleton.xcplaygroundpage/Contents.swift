@@ -11,3 +11,26 @@
  
  ## Code Example
  */
+import UIKit
+
+let app = UIApplication.shared
+
+public class MySingleton {
+  static let shared = MySingleton()
+  
+  private init() {}
+}
+
+let mySingleton = MySingleton.shared
+
+public class MySingletonPlus {
+  // 1
+  static let shared = MySingletonPlus()
+  // 2
+  public init() {}
+}
+// 3
+let singletonPlus = MySingletonPlus.shared
+
+// 4
+let singletonPlus2 = MySingletonPlus()
